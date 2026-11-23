@@ -1,0 +1,452 @@
+/*******************************************************************************
+ * Typography styles: Headings, text, links, tables, blockquotes
+ ******************************************************************************/
+
+@use "variables" as v;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+li,
+span,
+strong {
+  color: var(--global-text-color);
+}
+
+// 日本語の bold を確実にレンダリングするための fallback stack
+strong,
+b {
+  font-weight: 700;
+  font-family:
+    "Roboto",
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Noto Sans CJK JP",
+    "Noto Sans JP",
+    sans-serif;
+}
+
+// Global readable typography
+p,
+li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+hr {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+table {
+  td,
+  th {
+    font-size: 1rem;
+    padding: 1px 1rem 1px 0;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+a,
+table.table a {
+  color: var(--global-theme-color);
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+
+  &:hover:after :not(.nav-item.dropdown) {
+    width: 100%;
+  }
+}
+
+.table-dark {
+  background-color: transparent;
+  &.table-bordered {
+    border: 1px solid var(--global-divider-color) !important;
+  }
+}
+
+blockquote {
+  background: var(--global-bg-color);
+  border-left: 5px solid var(--global-theme-color);
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 1.2rem;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  /* Tips, warnings, and dangers blockquotes */
+  &.block-tip {
+    border-color: var(--global-tip-block);
+    background-color: var(--global-tip-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-tip-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-tip-block-title);
+    }
+  }
+
+  &.block-warning {
+    border-color: var(--global-warning-block);
+    background-color: var(--global-warning-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-warning-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-warning-block-title);
+    }
+  }
+
+  &.block-danger {
+    border-color: var(--global-danger-block);
+    background-color: var(--global-danger-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-danger-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-danger-block-title);
+    }
+  }
+}
+
+// 研究紹介の一覧（年 + タイトル、Barabási Lab の projects の形）
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .project-year {
+    min-width: 3rem;
+    color: var(--global-text-color-light);
+    font-variant-numeric: tabular-nums;
+  }
+  a {
+    font-weight: 600;
+  }
+  .project-desc {
+    flex-basis: 100%;
+    padding-left: 4rem;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// 論文マップ（/blog/map/）
+.paper-map {
+  --pm-c1: #2a78d6;
+  --pm-c2: #eb6834;
+  --pm-c3: #1baf7a;
+  --pm-c4: #eda100;
+  --pm-c5: #e87ba4;
+  --pm-c6: #008300;
+  --pm-c7: #6250d6;
+  --pm-c8: #e34948;
+  --pm-edge: rgba(80, 80, 78, 0.45);
+  --pm-edge-weak: rgba(80, 80, 78, 0.22);
+  --pm-surface: var(--global-bg-color);
+  --pm-border: var(--global-divider-color);
+}
+html[data-theme="dark"] .paper-map {
+  --pm-c1: #3987e5;
+  --pm-c2: #d95926;
+  --pm-c3: #199e70;
+  --pm-c4: #c98500;
+  --pm-c5: #d55181;
+  --pm-c6: #0ca30c;
+  --pm-c7: #9085e9;
+  --pm-c8: #e66767;
+  --pm-edge: rgba(200, 199, 190, 0.4);
+  --pm-edge-weak: rgba(200, 199, 190, 0.2);
+}
+.pm-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: center;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.9rem;
+  select {
+    margin-left: 0.4rem;
+    max-width: 100%;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    border: 1px solid var(--pm-border);
+    border-radius: 4px;
+    padding: 0.15rem 0.3rem;
+  }
+}
+.pm-count {
+  color: var(--global-text-color-light);
+}
+.pm-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    color: var(--global-text-color);
+    cursor: pointer;
+    &.on {
+      border-color: var(--global-text-color-light);
+    }
+  }
+}
+.pm-swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pm-n,
+.pm-meta {
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+}
+.pm-canvas {
+  position: relative;
+  border: 1px solid var(--pm-border);
+  border-radius: 6px;
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    touch-action: none;
+  }
+}
+.pm-link {
+  stroke: var(--pm-edge);
+  stroke-width: 1.2;
+}
+.pm-tagedge {
+  stroke: var(--pm-edge-weak);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+.pm-nodes circle {
+  stroke: var(--pm-surface);
+  stroke-width: 1.5;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    stroke: var(--global-text-color);
+    outline: none;
+  }
+}
+.pm-nodes circle.dim {
+  opacity: 0.12;
+}
+.pm-edges line.dim {
+  opacity: 0.08;
+}
+.pm-edges line.hidden {
+  display: none;
+}
+.pm-tip {
+  position: absolute;
+  max-width: 320px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  border: 1px solid var(--pm-border);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: 5;
+}
+.pm-table {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+.paper-map-link {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+.blog-topics {
+  margin: 0.5rem 0;
+  font-size: 0.88rem;
+  summary {
+    text-align: center;
+    cursor: pointer;
+  }
+}
+.blog-topic-group {
+  margin-top: 0.5rem;
+  line-height: 1.8;
+  a {
+    display: inline-block;
+    margin-right: 0.8rem;
+    span {
+      margin-left: 0.2rem;
+      font-size: 0.85em;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+.blog-topic-name {
+  display: block;
+  font-weight: 600;
+}
+.blog-intro {
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--global-text-color-light);
+}
+.post-ai-note {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+}
+
+// 業績: 講演の○の説明
+.pub-note {
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+// トップ: 名前と紹介文の横に写真を置く
+.about-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 225px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "head photo"
+    "intro photo";
+  column-gap: 2rem;
+  margin-bottom: 1rem;
+
+  .post-header {
+    grid-area: head;
+  }
+
+  .about-intro {
+    grid-area: intro;
+  }
+
+  .profile {
+    grid-area: photo;
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-top {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "head"
+      "photo"
+      "intro";
+
+    .profile {
+      margin-bottom: 1rem;
+
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+// トップ: 連絡先
+.about-address {
+  margin-bottom: 0.5rem;
+}
+
+.social.about-contact {
+  text-align: left;
+
+  .contact-icons {
+    font-size: 1.75rem;
+
+    a img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
