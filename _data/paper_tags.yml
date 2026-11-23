@@ -3,24 +3,24 @@
   tags:
     - { id: "community-detection", label: "コミュニティ検出", posts: 10 }
     - { id: "network-geometry", label: "幾何・埋め込み", posts: 5 }
-    - { id: "temporal-network", label: "時間発展するネットワーク", posts: 11 }
+    - { id: "temporal-network", label: "時間発展するネットワーク", posts: 12 }
     - { id: "social-network", label: "社会ネットワークの実証", posts: 5 }
-    - { id: "network-formation", label: "ネットワークの生成", posts: 3 }
+    - { id: "network-formation", label: "ネットワークの生成", posts: 4 }
     - { id: "multilayer-network", label: "多層ネットワーク", posts: 6 }
-    - { id: "network-inference", label: "推定・帰無モデル", posts: 9 }
+    - { id: "network-inference", label: "推定・帰無モデル", posts: 10 }
 - group: "ネットワーク上のダイナミクス"
   tags:
-    - { id: "opinion-dynamics", label: "意見のダイナミクス", posts: 11 }
-    - { id: "epidemics-contagion", label: "感染・伝播", posts: 11 }
+    - { id: "opinion-dynamics", label: "意見のダイナミクス", posts: 13 }
+    - { id: "epidemics-contagion", label: "感染・伝播", posts: 14 }
     - { id: "synchronization", label: "同期", posts: 5 }
-    - { id: "percolation-phase", label: "パーコレーション・相転移", posts: 15 }
+    - { id: "percolation-phase", label: "パーコレーション・相転移", posts: 17 }
     - { id: "resilience-control", label: "頑健性・制御", posts: 8 }
     - { id: "game-cooperation", label: "ゲーム・協力", posts: 6 }
 - group: "高次の構造"
   tags:
-    - { id: "hypergraph", label: "ハイパーグラフ", posts: 18 }
+    - { id: "hypergraph", label: "ハイパーグラフ", posts: 19 }
     - { id: "simplicial-topology", label: "単体複体・位相", posts: 11 }
-    - { id: "higher-order-dynamics", label: "高次の相互作用", posts: 20 }
+    - { id: "higher-order-dynamics", label: "高次の相互作用", posts: 21 }
 - group: "社会と経済"
   tags:
     - { id: "economic-network", label: "経済・サプライチェーン", posts: 10 }
@@ -29,24 +29,24 @@
     - { id: "science-of-science", label: "科学の科学", posts: 3 }
 - group: "LLM"
   tags:
-    - { id: "llm-agent", label: "LLM エージェント", posts: 21 }
-    - { id: "llm-evaluation", label: "LLM の評価", posts: 12 }
+    - { id: "llm-agent", label: "LLM エージェント", posts: 23 }
+    - { id: "llm-evaluation", label: "LLM の評価", posts: 14 }
     - { id: "collective-deliberation", label: "議論・集合知", posts: 4 }
-    - { id: "knowledge-graph", label: "知識グラフ・談話", posts: 6 }
-    - { id: "human-ai-interaction", label: "人と AI の協働", posts: 9 }
+    - { id: "knowledge-graph", label: "知識グラフ・談話", posts: 7 }
+    - { id: "human-ai-interaction", label: "人と AI の協働", posts: 10 }
 - group: "教育"
   tags:
-    - { id: "education", label: "教育・学習の分析", posts: 11 }
+    - { id: "education", label: "教育・学習の分析", posts: 13 }
 - group: "画像と動作"
   tags:
-    - { id: "pose-estimation", label: "姿勢推定", posts: 15 }
+    - { id: "pose-estimation", label: "姿勢推定", posts: 16 }
     - { id: "3d-reconstruction", label: "3 次元復元", posts: 6 }
-    - { id: "video-understanding", label: "動画の理解", posts: 17 }
-    - { id: "sports-analytics", label: "スポーツ", posts: 18 }
+    - { id: "video-understanding", label: "動画の理解", posts: 18 }
+    - { id: "sports-analytics", label: "スポーツ", posts: 19 }
 - group: "方法"
   tags:
-    - { id: "gnn-representation", label: "GNN・表現学習", posts: 8 }
+    - { id: "gnn-representation", label: "GNN・表現学習", posts: 9 }
     - { id: "physics-informed-ml", label: "物理と機械学習", posts: 10 }
-    - { id: "causal-inference", label: "因果推論・実験", posts: 7 }
+    - { id: "causal-inference", label: "因果推論・実験", posts: 8 }
     - { id: "time-series", label: "時系列・統計の検定", posts: 1 }
-    - { id: "statistical-physics", label: "統計物理", posts: 12 }
+    - { id: "statistical-physics", label: "統計物理", posts: 15 }

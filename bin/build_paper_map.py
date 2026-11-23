@@ -98,6 +98,8 @@ MAX_SUB = 3
 OVERRIDE = {
     "2608.02412": ["llm-evaluation"],  # LLM の表形式予測の失敗
     "2608.28403": ["human-ai-interaction"],  # 開発記録からのアーキテクチャ意図の復元
+    "2610.18871": ["pose-estimation"],  # 骨格をまたぐ動作の補完
+    "2610.21474": ["statistical-physics"],  # Katz 接続性と平均初到達時間
 }
 
 CAT_RE = re.compile(r"\b((?:cs|physics|stat|math|q-bio|q-fin|econ|eess|nlin|cond-mat)\.[A-Za-z\-]+)")
