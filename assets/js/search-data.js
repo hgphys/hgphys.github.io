@@ -92,6 +92,42 @@ ninja.data = [{
             window.location.href = "/blog/2026/arxiv-weekly-w44/";
           
         },
+      },{id: "post-arxiv-weekly-digest-2026-w43-10-19-10-23",
+        
+          title: "arXiv Weekly Digest: 2026-W43 (10/19–10/23)",
+        
+        description: "降雨による鉄道遅延の相転移、繰り返し入る外部強制の凝縮、LLM 集団の慣習の形成など、ネットワーク上の伝播と合意の相図を描き直す理論研究が並んだ週。",
+        keywords: "鉄道遅延, 降雨, 相転移, 外部強制, 凝縮, ギブス測度, 空撃ち, LLM エージェント, ネーミングゲーム, 意見を変えない少数派, 知識グラフ, デザインサイエンス研究, 会話の記憶, 監査",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/arxiv-weekly-w43/";
+          
+        },
+      },{id: "post-arxiv-weekly-digest-2026-w42-10-12-10-16",
+        
+          title: "arXiv Weekly Digest: 2026-W42 (10/12–10/16)",
+        
+        description: "感染の広がり方で時間ネットワークを比べる尺度や、配線を変えて意見の多数派を動かす問題の理論と、生成・推定の結果が構造や力学とどこまで合うかを確かめる研究が並んだ週。",
+        keywords: "時間ネットワーク, 感染曲線, 動的時間伸縮, 埋め込み距離, Friedkin-Johnsen モデル, 意見の中央値, NP 困難, 辺の追加, Katz 中心性, レゾルベント, 平均初到達時間, 離散グラフ拡散, 潜在的な社交性, 次数の不均質性, 単眼動画, 接触力, 物理損失, 映像言語モデル, 反復回数, 線形プローブ, 動作補完, 調和拡張, 授業づくり, 発話思考法",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/arxiv-weekly-w42/";
+          
+        },
+      },{id: "post-arxiv-weekly-digest-2026-w41-10-5-10-9",
+        
+          title: "arXiv Weekly Digest: 2026-W41 (10/5–10/9)",
+        
+        description: "流行モデルの標準的な解析手法の前提を確かめ直す理論と、高次モデルや LLM による評価・シミュレーションの結果が何に由来するのかを切り分ける研究が並んだ週。",
+        keywords: "流行モデル, ボンドパーコレーション, 等価性, 速い変数の消去, 複雑伝染, 時間スケールの分離, 双安定, 次数相関, フラクタル性, スケールフリーネットワーク, 臨界分岐過程, ハイパーグラフ学習, 性能帰属, クリーク展開, 低次ベースライン, LLM 審査員, 順序の効果, 一般化線形混合モデル, 評定者の混同行列, 提示順バイアス, マルチエージェントシミュレーション, 基盤モデル, ペルソナ, フィールド実験, 授業中の発言",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/arxiv-weekly-w41/";
+          
+        },
       },{id: "post-arxiv-weekly-digest-2026-w40-9-28-10-2",
         
           title: "arXiv Weekly Digest: 2026-W40 (9/28–10/2)",
